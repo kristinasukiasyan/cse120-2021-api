@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Hobby</title>
+    <link href="football.css" rel="stylesheet" type="text/css"/>
+    <script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>
+      Survey for Football Lovers  
+    </h1>
+    <form>
+      <div class="formdiv">
+        <strong><label for="fname">Your full name is:</label><br></strong>
+        <input type="text" id="fname" name="fname" onblur="printfnamevalue()" required> 
+      </div>       
+      <div class="formdiv">
+        <strong><label for="duration">For how long are you a football fan? (in years)</label><br></strong>
+        <input type="text" id="duration" name="duration" onblur="printdurationvalue()" required> 
+      </div> 
+      <div class="formdiv">
+        <strong><label for="spendtime">How much time do you spend weekly on football?  (in hours) </label><br></strong>
+        <input type="text" id="spendtime" name="spendtime" onblur="printspendtimevalue()"required> 
+      </div>
+      <div class="formdiv">
+        <strong><label for="longestspendtime">What is the longest time you had ever spent on football?  (in hours) </label><br></strong>
+        <input type="text" id="longestspendtime" name="longestspendtime" onblur="printlongestspendtimevalue()" required>   
+      </div>
+      <div class="formdiv">
+          <strong><label for="position">Which is your favourite football position? </label><br></strong>  
+        <div class="formdiv2">
+          <input type="radio" id="goalkeeper" name="position" value="goalkeeper" onchange="printpositionvalue(event)"required>   
+          <label for="goalkeeper">Goalkeeper</label><br>
+          <input type="radio" id="defender" name="position" value="defender" onchange="printpositionvalue(event)" required>   
+          <label for="defender">Defender</label><br>
+          <input type="radio" id="midfielder" name="position" value="midfielder" onchange="printpositionvalue(event)" required>   
+          <label for="midfielder">Midfielder</label><br>
+          <input type="radio" id="forward" name="position" value="forward" onchange="printpositionvalue(event)" required>   
+          <label for="forward">Forward</label><br>
+        </div>
+      </div>      
+      <div class="formdiv">
+        <strong><label for="favclub">What is your favourite football club?</label><br></strong>
+        <input type="text" id="favclub" name="favclub" onblur="printfavclubvalue()" required> 
+      </div>      
+      <div class="formdiv">
+        <strong><label for="favnationalteam">What is your favourite football national team?</label><br></strong>
+        <input type="text" id="favnationalteam" name="favnationalteam" onblur="printfavnationalteamvalue()" required> 
+      </div>          
+      <div class="formdiv">
+          <strong><label for="favleague">Which is your favourite league? </label><br></strong>  
+        <div class="formdiv2">
+          <input type="checkbox" id="championsleague" name="favleague" value="championsleague" onchange="printfavleaguevalue(event)" required>   
+          <label for="championsleague">Champions league</label><br>
+          <input type="checkbox" id="laliga" name="favleague" value="laliga" onchange="printfavleaguevalue(event)" required>   
+          <label for="laliga">La liga</label><br>
+          <input type="checkbox" id="bundesliga" name="favleague" value="bundesliga" onchange="printfavleaguevalue(event)" required>   
+          <label for="bundesliga">Bundesliga</label><br>
+          <input type="checkbox" id="premierleague" name="favleague" value="premierleague" onchange="printfavleaguevalue(event)" required>  
+          <label for="premierleague">Premier league</label><br>
+          <input type="checkbox" id="seriea" name="favleague" value="seriea" onchange="printfavleaguevalue(event)" required>   
+          <label for="seriea">Serie A</label><br>
+          <input type="checkbox" id="otherfavleague" name="favleague" value="otherfavleague" onchange="printfavleaguevalue(event)" required>
+          <label for="otherfavleague">Other</label><br>  
+          <input type="text" id="otherfavleaguetext"  onblur="printotherfavleaguetextvalue()"><br> 
+        </div>
+      </div>  
+      <div class="formdiv">
+          <strong><label for="competition">Which is your favourite competition of national teams'? </label><br></strong>  
+        <div class="formdiv2">
+          <input type="checkbox" id="fifaworldcup" name="competition" value="fifaworldcup" onchange="printcompetitionvalue(event)" required> 
+          <label for="fifaworldcup">FIFA World Cup</label><br>
+          <input type="checkbox" id="uefaeuro" name="competition" value="uefaeuro" onchange="printcompetitionvalue(event)"required>  
+          <label for="uefaeuro">UEFA Euro</label><br>
+          <input type="checkbox" id="copaamerica" name="competition" value="copaamerica" onchange="printcompetitionvalue(event)" required> 
+          <label for="copaaperica">Copa America</label><br>
+          <input type="checkbox" id="othercompetition" name="competition" onchange="printcompetitionvalue(event)" value="othercompetition" required>
+          <label for="othercompetition">Other</label><br>  
+          <input type="text" id="othercompetitiontext" onblur="printothercompetitiontextvalue()"><br> 
+        </div>
+      </div>   
+      <div class="formdiv">
+        <strong><label for="favgoalkeeper">Who is your favourite goalkeeper?</label><br></strong>
+        <input type="text" id="favgoalkeeper" name="favgoalkeeper" onblur="printfavgoalkeepervalue()"required> 
+      </div>
+      <div class="formdiv">
+        <strong><label for="favdefender">Who is your favourite defender?</label><br></strong>
+        <input type="text" id="favdefender" name="favdefender" onblur="printfavdefendervalue()"required> 
+      </div> 
+      <div class="formdiv">
+        <strong><label for="favmidfielder">Who is your favourite midfielder?</label><br></strong>
+        <input type="text" id="favmidfielder" name="favmidfielder" onblur="printfavmidfieldervalue()"required> 
+      </div>   
+      <div class="formdiv">
+        <strong><label for="favforward">Who is your favourite forward?</label><br></strong>
+        <input type="text" id="favforward" name="favforward" onblur="printfavforwardvalue()" required> 
+      </div>      
+      <div class="formdiv">
+        <strong><label for="favcoach">Who is your favourite coach?</label><br></strong>
+        <input type="text" id="favcoach" name="favcoach" onblur="printfavcoachvalue()" required> 
+      </div> 
+      <button class="button" style="" onclick="submitmyhobbydata(event)">Submit</button>  
+    </form>  
+    <script src="script.js">
+    </script>     
+  </body>
+</html>

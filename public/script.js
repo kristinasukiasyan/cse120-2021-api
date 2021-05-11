@@ -1,4 +1,6 @@
-
+var requiredfields = [
+  "fname", "title"
+]
 var favbook = {
   "project" : "Book",
   "owner" : "Kristina Sukiasyan",
@@ -7,14 +9,14 @@ var favbook = {
   "author" : "",
   "colour" : "",
   "covertype" : "",
-  "othercover" : "",
+  "othercovervalue" : "",
   "npages" : "",
   "price" : "",
   "currency" : "",
   "language" : "",
-  "otherlanguage" : "",
+  "otherlanguagevalue" : "",
   "originallanguage" : "",
-  "otherlanguage2" : "",
+  "otherlanguagevalue2" : "",
   "edition" : "",
   "dimensions" : "",
   "publisher" : "",
@@ -42,17 +44,17 @@ function printcolourvalue() {
 
 function printcovertypevalue(e){
  favbook.covertype= e.target.value; 
- if (favbook.covertype !="other"){
-   favbook.other="";
-   document.getElementById("othertext").style.display="none";
+ if (favbook.covertype !="othercover"){
+   favbook.othercovervalue="";
+   document.getElementById("othercovervalue").style.display="none";
  } else{
-   document.getElementById("othertext").style.display="block";
+   document.getElementById("othercovervalue").style.display="block";
  }
 }
 
-function printothervalue(){
-if(favbook.covertype="other"){
- favbook.other=document.getElementById("othertext").value;
+function printothercovervalue(){
+if(favbook.covertype="othercover"){document.getElementById("othercovervalue").style.display="block";
+ favbook.othercovervalue=document.getElementById("othercovervalue").value;
 }
 }
 
@@ -70,33 +72,33 @@ function printcurrencyvalue() {
 
 function printlanguagevalue(e){
  favbook.language= e.target.value; 
- if (favbook.language !="other1"){
-   favbook.otherlanguage="";
-   document.getElementById("othertext1").style.display="none";
+ if (favbook.language !="otherlanguage"){
+   favbook.otherlanguagevalue="";
+   document.getElementById("otherlanguagevalue").style.display="none";
  } else{
-   document.getElementById("othertext1").style.display="block";
+   document.getElementById("otherlanguagevalue").style.display="block";
  }
 }
 
 function printotherlanguagevalue(){
-if(favbook.language="other1"){
- favbook.otherlanguage=document.getElementById("othertext1").value;
+if(favbook.language="otherlanguagevalue"){ document.getElementById("otherlanguagevalue").style.display = "block";
+ favbook.otherlanguagevalue=document.getElementById("otherlanguagevalue").value;
 }
 }
 
 function printoriginallanguagevalue(e){
  favbook.originallanguage= e.target.value; 
- if (favbook.originallanguage !="other2"){
-   favbook.otherlanguage2="";
-   document.getElementById("othertext2").style.display="none";
+ if (favbook.originallanguage !="otherlanguage2"){
+   favbook.otherlanguagevalue2="";
+   document.getElementById("otherlanguagevalue2").style.display="none";
  } else{
-   document.getElementById("othertext2").style.display="block";
+   document.getElementById("otherlanguagevalue2").style.display="block";
  }
 }
 
 function printotherlanguagevalue2(){
-if(favbook.originallanguage="other2"){
- favbook.otherlanguage2=document.getElementById("othertext2").value;
+if(favbook.originallanguage="otherlanguage2"){document.getElementById("otherlanguagevalue2").style.display = "block";
+ favbook.otherlanguagevalue2=document.getElementById("otherlanguagevalue2").value;
 }
 }
 
@@ -128,7 +130,9 @@ function printagevalue() {
   favbook.age = document.getElementById("age").value; 
 }  
  
-
+var requiredfieldsfootball = [
+  "fname", "title"
+]
 var myhobby = {
   "project" : "hobby",
   "owner" : "Kristina Sukiasyan",
@@ -140,9 +144,9 @@ var myhobby = {
   "favclub" : "",
   "favnationalteam" : "",
   "favleague" : "",
-  "otherfavleaguetext" : "",
+  "otherfavleaguevalue" : "",
   "competition" : "",
-  "othercompetitiontext" : "",
+  "othercompetitionvalue" : "",
   "favgoalkeeper" : "",
   "favdefender" : "",
   "favmidfielder" : "",
@@ -168,8 +172,21 @@ function printlongestspendtimevalue() {
 
 
 function printpositionvalue(e){
- myhobby.position= e.target.value; 
-} 
+ myhobby.position = e.target.value;
+  if(myhobby.position == "goalkeeper") {
+    myhobby.position = document.getElementById("goalkeeper").value;
+  }
+  else if(myhobby.position == "defender"){
+    myhobby.position = document.getElementById("defender").value;
+  }
+  else if(myhobby.position == "midfielder") {
+    myhobby.position = document.getElementById("midfielder").value;
+  }
+  else if(myhobby.position == "forward") {
+    hobbyTennis.favtournament = document.getElementById("frenchopen").value;
+  }
+}
+
 
 function printfavclubvalue() {
   myhobby.favclub = document.getElementById("favclub").value;
@@ -183,30 +200,30 @@ function printfavnationalteamvalue() {
 function printfavleaguevalue(e) {
   myhobby.favleague = e.target.value;
   if (myhobby.favleague != "otherfavleague") {
-    myhobby.otherfavleaguetext = ""; document.getElementById("otherfavleaguetext").style.display = "none";
-  } else {document.getElementById("otherfavleaguetext").style.display = "block";
-  myhobby.otherfavleaguetext = document.getElementById("otherfavleaguetext").value
+    myhobby.otherfavleaguevalue = ""; document.getElementById("otherfavleaguevalue").style.display = "none";
+  } else {document.getElementById("otherfavleaguevalue").style.display = "block";
+  myhobby.otherfavleaguevalue = document.getElementById("otherfavleaguevalue").value
   }
 }
 
 function printotherfavleaguetextvalue() {
-  if (myhobby.favleague == "otherfavleague") {
-    myhobby.otherfavleaguetext = document.getElementById("otherfavleaguetext").value;
+  if (myhobby.favleague == "otherfavleague") {document.getElementById("otherfavleaguevalue").style.display = "block";
+    myhobby.otherfavleaguevalue = document.getElementById("otherfavleaguevalue").value;
   }
 }
 
 function printcompetitionvalue(e) {
   myhobby.competition = e.target.value;
   if (myhobby.competition != "othercompetition") {
-    myhobby.othercompetitiontext = ""; document.getElementById("othercompetitiontext").style.display = "none";
-  } else {document.getElementById("othercompetitiontext").style.display = "block";
-  myhobby.othercompetitiontext = document.getElementById("othercompetition").value
+    myhobby.othercompetitionvalue = ""; document.getElementById("othercompetitionvalue").style.display = "none";
+  } else {document.getElementById("othercompetitionvalue").style.display = "block";
+  myhobby.othercompetitionvalue = document.getElementById("othercompetitionvalue").value
   }
 }
 
 function printothercompetitiontextvalue() {
-  if (myhobby.competition == "othercompetition") {
-    myhobby.othercompetitiontext = document.getElementById("othercompetitiontext").value;
+  if (myhobby.competition == "othercompetition") {document.getElementById("othervompetitionvalue").style.display = "block";
+    myhobby.othercompetitionvalue = document.getElementById("othercompetitionvalue").value;
   }
 }
 
@@ -239,10 +256,10 @@ function validateFormData() {
   var isFormValid = true;
   var keys = Object.keys(favbook);
   keys.forEach(key => {
-      if (requiredFields.indexOf(key) > -1 && favbook[key] == "") { console.log(key, " is a required field, please add a value") 
-      if (requiredFieldsFootball.indexOf(key) > -1 && myhobby[key] == "") { console.log(key, " is a required field, please add a value")
+      if (requiredfields.indexOf(key) > -1 && favbook[key] == "") { console.log(key, " is a required field, please add a value") 
+      if (requiredfieldsfootball.indexOf(key) > -1 && myhobby[key] == "") { console.log(key, " is a required field, please add a value")
       if(document.getElementById(key)) {
-        document.getElementById(key).style.backgroundColor = "yellow"; 
+        document.getElementById(key).style.backgroundColor = "plum"; 
         isFormValid = false;
           }
         } 
@@ -251,7 +268,7 @@ function validateFormData() {
   return isFormValid;
 }
 
-function saveData(e) {
+function saveBookData(e) {
 e.preventDefault();
 if(validateFormData() == false){
   return;
@@ -277,7 +294,7 @@ if(validateFormData() == false){
   }
 }
 
-function saveDataFootball(e) {
+function saveFootballData(e) {
 e.preventDefault();
 if(validateFormData() == false){
   return;
@@ -303,7 +320,7 @@ if(validateFormData() == false){
   }
 }
 
-function updateData(e) {
+function updateBookData(e) {
   e.preventDefault();
   var updatedBook = {};
   updatedBook.id = document.getElementById("_idBook").value;
@@ -350,7 +367,7 @@ function updateData(e) {
   }
 }
 
-function updateDataFootball(e) {
+function updateFootballData(e) {
   e.preventDefault();
   var updatedFootball = {};
   updatedFootball.id = document.getElementById("_idfootball").value;

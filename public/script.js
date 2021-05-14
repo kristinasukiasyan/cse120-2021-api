@@ -277,7 +277,7 @@ if(validateFormData() == false){
 
     $.ajax({
     type: 'POST',
-    url: "https://cse120-2021api-kristina.herokuapp.comdata",
+    url: "https://cse120-2021api-kristina.herokuapp.com/data",
     data: favbook,
     cache: false,
     dataType : 'json',

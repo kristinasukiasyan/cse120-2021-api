@@ -277,7 +277,7 @@ if(validateFormData() == false){
 
     $.ajax({
     type: 'POST',
-    url: "https://cse120-2021api-kristina.herokuapp.com/data",
+    url: "https://cse120-2021api-kristina.herokuapp.com/admin.html",
     data: favbook,
     cache: false,
     dataType : 'json',
@@ -303,7 +303,7 @@ if(validateFormData() == false){
 
     $.ajax({
     type: 'POST',
-    url: "https://cse120-2021api-kristina.herokuapp.com/data",
+    url: "https://cse120-2021api-kristina.herokuapp.com/admin.html",
     data: myhobby,
     cache: false,
     dataType : 'json',
@@ -350,7 +350,7 @@ function updateBookData(e) {
 
       $.ajax({
       type: 'POST',
-      url: "https://cse120-2021api-kristina.herokuapp.com/data",
+      url: "https://cse120-2021api-kristina.herokuapp.com/admin.html",
       data: updatedBook,
       cache: false,
       dataType : 'json',
@@ -393,7 +393,7 @@ function updateFootballData(e) {
 
       $.ajax({
       type: 'POST',
-      url: "https://cse120-2021api-kristina.herokuapp.com/data",
+      url: "https://cse120-2021api-kristina.herokuapp.com/admin.html",
       data: updatedFootball,
       cache: false,
       dataType : 'json',
@@ -421,7 +421,7 @@ function loadExistingData() {
     otherData = [];
     $.ajax({
         type : "GET",
-        url : "https://cse120-2021api-kristina.herokuapp.com/data",
+        url : "https://cse120-2021api-kristina.herokuapp.com/admin.html",
         dataType : "json",
         success : function(data) {
         	console.log("success", data);
@@ -530,7 +530,7 @@ function deleteData(id) {
 
     $.ajax({
         type: 'POST',
-        url: "https://cse120-2021api-kristina.herokuapp.com/data",
+        url: "https://cse120-2021api-kristina.herokuapp.com/admin.html",
         data: tmp,
         cache: false,
         dataType : 'json',

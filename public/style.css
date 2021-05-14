@@ -2,7 +2,7 @@ body {
   font-family: "timenewroman", serif;
   font-size: 20px;
   text-align: center;
-  background-color:Plum;
+  background-image: url(https://freeonlinesurveys.com/wp-content/uploads/2020/02/Buy-Survey-Responses.png);
   background-attachment: fixed;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -10,16 +10,8 @@ body {
   padding-left: 320px
 }  
 
-h1 {
-  font-size: 60px;
-  font-style: italic;
-}
 
 
-img#book {
-  margin: 30px; 
-  width: 600px
-}
 
 div.formdiv {
   background-color: rgb(247, 218, 247);
@@ -31,30 +23,7 @@ div.formdiv {
   margin-bottom: 30px
 }
 
-input[type=text] {
-  background-color:white;
-  width: 300px;
-  height: 30px;
-  padding: 25px;
-  border-radius: 30px;
-  box-sizing: border-box;
-  border-color: rgb(155, 78, 155)
-}  
 
-div.formdiv2 {
-width: 300px;
-margin-left: auto;
-margin-right: auto;
-text-align: justify
-}
-
-button {
-  font-family: "timesnewroman", serif;
-  font-size: 30px;
-  background-color:rgb(247, 218, 247);
-  border-width: 5px;
-  border-color:  rgb(155, 78, 155)
-}
 
 div.mainpage {
 font-size: 60px;

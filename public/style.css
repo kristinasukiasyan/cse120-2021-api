@@ -56,4 +56,7 @@ button {
   border-color:  rgb(155, 78, 155)
 }
 
-
+div.mainpage {
+font-size: 60px;
+font-style: italic;  
+}  
